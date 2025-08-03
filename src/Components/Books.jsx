@@ -7,7 +7,7 @@ import Fantasy from './Genre/Fantasy.png';
 import mystry from './Genre/mistery.png';
 import romance from "./Genre/romance.png";
 import historical from "./Genre/history.png";
-import scifi from "./Genre/sci-fi.png";
+import scifi from "./Genre/Sci-fi.png";
 import adv from "./Genre/Travel.png";
 import '../App.css'
 
