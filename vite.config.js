@@ -9,7 +9,8 @@ export default defineConfig({
     port: process.env.PORT || 5173,
     allowedHosts: [
       'react-book-cloud-1.onrender.com',
-      'react-book-cloud-2.onrender.com'
+      'react-book-cloud-2.onrender.com',
+      'react-book-cloud-3.onrender.com'
     ]
   }
 })
