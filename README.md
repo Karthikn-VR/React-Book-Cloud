@@ -13,7 +13,7 @@
 
 ## 🖼️ Demo Preview
 
-![BookCloud Screenshot](./homepage.png)  
+![BookCloud Screenshot](./homepage.jpg)  
 *(Add a real screenshot or GIF showing your app in action)*
 
 ## 🛠️ Tech Stack
