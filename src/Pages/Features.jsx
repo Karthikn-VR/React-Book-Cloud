@@ -39,7 +39,7 @@ export default function Features() {
   ];
 
   return (
-    <>
+    <div>
       <Navbar />
       <div 
         className="container-fluid py-5" 
@@ -170,6 +170,6 @@ export default function Features() {
           }
         `}
       </style>
-    </>
+    </div>
   );
 }

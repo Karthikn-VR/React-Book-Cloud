@@ -9,7 +9,8 @@ import romance from "./Genre/romance.png";
 import historical from "./Genre/history.png";
 import scifi from "./Genre/Sci-fi.png";
 import adv from "./Genre/Travel.png";
-import '../App.css'
+import '../App.css';
+import BookCard from "./BookCard";
 
 export default function Books() {
   const [books, setBooks] = useState([]);
@@ -46,56 +47,12 @@ const genres = [
   }, [pages]);
 
   return (
-    <div className="container my-4" style={{ backgroundColor: "#F8F4F0", borderRadius: "12px" }}>
-      <h2 className="mb-4 fw-bold" style={{ color: "#3E2F5B"}}>Popular Books</h2>
-      <div className="row">
-        {books.map((book, index) => {
-          const info = book.volumeInfo;
-          return (
-            <div className="col-md-2 d-flex flex-column mb-4" key={index}>
-              <div className="card h-100 d-flex flex-column border-0 shadow" style={{ width: '100%', maxWidth: '14rem', borderRadius: "10px" }}>
-                <img
-                  src={
-                    info.imageLinks?.thumbnail?.replace("http://", "https://") ||
-                    "https://via.placeholder.com/128x193?text=No+Image"
-                  }
-                  className="card-img-top p-2"
-                  alt={info.title}
-                  style={{
-                    height: "183px",
-                    width: "115px",
-                    color:'Highlight' ,
-                    objectFit: "contain",
-                    alignSelf: "center"
-                  }}
-                />
-                <div className="card-body">
-                  <h6 className="card-title text-truncate" title={info.title}>
-                    {info.title}
-                  </h6>
-                  <p className="card-text" style={{ fontSize: '0.8rem' }}>
-                    <strong>Author:</strong> {info.authors?.[0] || "Unknown"}
-                  </p>
-                  <a
-                    href={info.infoLink}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="btn btn-sm w-100 mt-auto"
-                    style={{
-                      backgroundColor: "#6D597A",
-                      color: "#fff",
-                      fontWeight: "500",
-                      borderRadius: "6px",
-                      border: "none"
-                    }}
-                  >
-                    View
-                  </a>
-                </div>
-              </div>
-            </div>
-          );
-        })}
+    <div className="container my-4 px-3" style={{ backgroundColor: "#F8F4F0", borderRadius: "12px" }}>
+      <h2 className="mb-4 pt-3 fw-bold" style={{ color: "#3E2F5B"}}>Popular Books</h2>
+      <div className="row g-3">
+        {books.map((book, index) => (
+          <BookCard key={index} bookInfo={book.volumeInfo} />
+        ))}
       </div>
 
    
